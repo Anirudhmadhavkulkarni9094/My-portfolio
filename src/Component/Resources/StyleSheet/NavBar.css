@@ -25,7 +25,8 @@
 
 @media screen and (max-width: 768px) {
     
-    *{
+    .navbar{
+        background-color: rgb(74, 74, 74)!important;
         font-size: 10px;
     }
 }
