@@ -26,22 +26,22 @@ function NavBar() {
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
           <ul className="navbar-nav me-auto mb-2 mb-lg-0">
             <li className="nav-item">
-              <Link className="nav-link active" aria-current="page" to="/My-Blog" data-bs-toggle="collapse">
+              <Link className="nav-link active" aria-current="page" to="/My-Blog">
                 My Blogs
               </Link>
             </li>
             <li className="nav-item">
-              <Link className="nav-link" to="/My-Project" data-bs-toggle="collapse">
+              <Link className="nav-link" to="/My-Project">
                 My Project
               </Link>
             </li>
             <li className="nav-item">
-              <Link className="nav-link" to="/About-me" data-bs-toggle="collapse">
+              <Link className="nav-link" to="/About-me">
                 About me
               </Link>
             </li>
             <li className="nav-item">
-              <Link className="nav-link" to="/Feedback" data-bs-toggle="collapse">
+              <Link className="nav-link" to="/Feedback">
                 Feedback
               </Link>
             </li>
