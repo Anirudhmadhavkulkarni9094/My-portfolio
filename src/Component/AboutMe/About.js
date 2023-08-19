@@ -7,7 +7,7 @@ function About() {
   return (
     <>
         <div className='row m-5 d-flex justify-content-between'>
-            <div className='col-lg-4 left-menu'>
+            <div className='col-lg-4 left-menu justify-content'>
                 <LeftMenu/>
             </div>
             <div className='col-lg-8 p-2 right-menu'>

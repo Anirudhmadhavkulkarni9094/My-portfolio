@@ -21,3 +21,11 @@
 .nav-link:hover{
     color: #0D6EFD!important;
 }
+
+
+@media screen and (max-width: 768px) {
+    
+    *{
+        font-size: 10px;
+    }
+}
