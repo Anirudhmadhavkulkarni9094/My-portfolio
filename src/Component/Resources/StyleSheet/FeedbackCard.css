@@ -23,7 +23,7 @@
     border-right: 2px solid white;
     height: 38rem;
     overflow: scroll;
-    background-color: #ffffff;
+    background-color: rgb(88, 88, 88);
 }
 
 /* Hide scrollbar */
