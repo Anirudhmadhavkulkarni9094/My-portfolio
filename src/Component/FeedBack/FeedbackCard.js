@@ -3,11 +3,11 @@ import '../Resources/StyleSheet/FeedbackCard.css'
 function FeedbackCard({feedback}) {
   return (
     <>
-    <div className='Feedback-card m-5'>
-        <div className='Header'>
+    <div className='Feedback-card'>
+        <div className='feedback-name'>
             <h5>{feedback.name}</h5>
         </div>
-        <div className='body'>
+        <div className='feedback-message'>
             <p>{feedback.message}</p>
         </div>
     </div>

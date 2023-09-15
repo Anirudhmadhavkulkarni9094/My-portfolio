@@ -1,6 +1,10 @@
 import React from 'react'
 import '../Resources/StyleSheet/Login.css'
 function Login() {
+
+    const HandleLogin = ()=>{
+        
+    }
   return (
     <div className='form'>
         <form>
@@ -26,6 +30,7 @@ function Login() {
                 </input>
             </div>
         </form>
+        <button className='btn btn-primary' onClick={()=>HandleLogin()}>Login</button>
     </div>
   )
 }

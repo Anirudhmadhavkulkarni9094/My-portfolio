@@ -2,7 +2,7 @@
 .Title_blogs{
     display: flex;
     justify-content: space-between;
-    border: 2px white solid ;
+    border: 2px rgb(0, 0, 0) solid ;
     padding: 1rem;
     align-items: center;
     border-radius: 1rem;
@@ -10,6 +10,7 @@
     font-family: 'Inconsolata', monospace;
     font-size: 1.1rem;
     margin: 2rem 0rem!important;
+    background: linear-gradient(45deg, #3494e6, #ec6ead, #ff6f61);
 
 }
 
@@ -17,10 +18,36 @@
     box-shadow: 0px 0px 10px white;
 }
 
+/* blog form */
 
-@media screen and (max-width: 768px) {
-    
-    *{
-        font-size: 10px;
-    }
+.Blog-form-layout{
+    text-align: center;
+    padding: 2rem;
+    background: linear-gradient(rgb(0,0,255),rgb(0,0,0));
+    display: flex;
+    flex-direction: column;
+    border: none!important;
+    box-shadow: 0px 0px 0px black!important;
+    color: white;
 }
+
+.blog-form{
+    border: none;
+    box-shadow: none;
+    color: white;
+}
+
+.blog-input{
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+}
+
+.blog-input input,
+.blog-input textarea{
+    padding: 1rem;
+    margin: 1rem 0rem;
+    border-radius: 1rem;
+}
+

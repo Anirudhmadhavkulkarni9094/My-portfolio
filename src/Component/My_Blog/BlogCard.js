@@ -26,7 +26,7 @@ function BlogCard({ blog, onDelete }) {
                 {title}
             </div>
             <div>
-                <button type="button" className="btn btn-outline-light mx-2" data-bs-toggle="modal" data-bs-target={`#${_id}`}>
+                <button type="button" className="btn btn-dark mx-2" data-bs-toggle="modal" data-bs-target={`#${_id}`}>
                     Read More
                 </button>
             </div>

@@ -6,7 +6,7 @@ import '../Resources/StyleSheet/Profile.css'
 function About() {
   return (
     <>
-        <div className='row m-5 d-flex justify-content-between'>
+        <div className='row m-5 d-flex justify-content-between about-me'>
             <div className='col-lg-4 left-menu justify-content'>
                 <LeftMenu/>
             </div>

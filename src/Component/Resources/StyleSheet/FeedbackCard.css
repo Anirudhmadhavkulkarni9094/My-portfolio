@@ -1,36 +1,19 @@
 .Feedback-card{
-    border: 2px solid white;
-    padding: 1rem;
-    height: 10rem;  
-    box-shadow: 5px 5px 10px #000000;;
-    border-radius: 1rem;
-    
-}
-
-.Feedback-card h5 , .Feedback-card p{
-    font-size: 1rem!important;
-}
-
-.Feedback-card:hover{
-    transform: translate(5px, 5px);
-    box-shadow: none;
-    transition: 0.3s ease-in-out;
-    border: 2px solid #e1e1e1;;
-
+    display: flex;
+    flex-direction: column;
+    width: 30rem;
+    padding: 2rem;
+    margin: 1rem ;
+    justify-content: center;
+    border-radius: 2rem;
+    box-shadow: 0px 0px 10px grey;
+    background: linear-gradient(40deg, #3494e6, #85a3e0, #ff6f61, #ff8d8d);
 }
 
 .feedbacks{
-    border-right: 2px solid white;
-    height: 38rem;
-    overflow: scroll;
-    background-color: rgb(88, 88, 88);
+    justify-content: center;
 }
 
-/* Hide scrollbar */
-.feedbacks::-webkit-scrollbar {
-    width: 0.5em; /* Adjust this width as needed */
-}
-
-.feedbacks::-webkit-scrollbar-thumb {
-    background-color: transparent; /* Hide the thumb */
+.feedback-page{
+    justify-content: center;
 }

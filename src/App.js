@@ -6,6 +6,7 @@ import NavBar from './Component/NavBar/NavBar';
 import Project from './Component/Projects/Project';
 import About from './Component/AboutMe/About';
 import FeedBack from './Component/FeedBack/FeedBack';
+import AdminPanel from './Component/Admin-page/AdminPanel';
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
         <Route path="/My-Project" element={<Project />} />
         <Route path="/about-me" element={<About />} />
         <Route path="/feedback" element={<FeedBack />} />
+        <Route path="/Admin-panel" element={<AdminPanel/>} />
     </Routes>
   </BrowserRouter>
   );

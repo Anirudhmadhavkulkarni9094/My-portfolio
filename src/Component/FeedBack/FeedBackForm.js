@@ -36,7 +36,11 @@ function FeedBackForm() {
     };
 
     return (
-        <div className='m-5 FeedbackForm'>
+        <div className='m-auto my-5 FeedbackForm'>
+            <h1>Hello there! Hope you are having nice day!
+            </h1>
+            <p>Please do provide a nice review!</p>
+            <hr></hr>
             <form onSubmit={handleSubmit}>
                 <div className='inputField'>
                     <label>Name</label>

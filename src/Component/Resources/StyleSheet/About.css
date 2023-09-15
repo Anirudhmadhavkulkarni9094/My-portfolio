@@ -4,7 +4,7 @@
 .profileImg{
     width: 15rem;
     border-radius: 50%;
-    margin: 0rem 2rem;
+    margin: 0rem auto;
     border: 2px white solid;
 }
 .profileImg:hover{
@@ -32,4 +32,11 @@
 }
 .dept{
     font-size: 14px;
+}
+
+.about-me{
+    background-color: rgb(23, 22, 22);
+    margin: 0!important;
+    padding: 3rem;
+    color: aliceblue;
 }

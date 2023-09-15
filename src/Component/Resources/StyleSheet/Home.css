@@ -4,5 +4,34 @@
 
 .home{
   font-family: 'Courier New', Courier, monospace;
+  background-color: black;
+  margin: 0rem!important;
+  /* height: 100vh; */
+  padding: 5rem;
+}
 
+.Intro-home{
+  font-size: 5rem;
+  width: 25rem;
+
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.Intro-home {
+  background: linear-gradient(#ffffff, rgb(0, 0, 255) , rgb(95, 255, 95));
+  background-clip: text;
+  color: transparent;
+}
+
+
+.testimonial{
+  text-align: center;
+  padding: 3rem;
+  background-color: antiquewhite;
+}
+
+.feedbacks{
+  display: flex;
+  flex-wrap: wrap;
+  margin: 1rem;
 }

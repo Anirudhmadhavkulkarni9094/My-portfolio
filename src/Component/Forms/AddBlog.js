@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import '../Resources/StyleSheet/Login.css';
+import '../Resources/StyleSheet/BlogCard.css';
 import axios from 'axios';
 
 function AddBlog() {
@@ -29,27 +29,30 @@ function AddBlog() {
   };
 
   return (
-    <div>
-      <form onSubmit={handleSubmit}>
-        <div className='form_comp'>
+    <div className='Blog-form-layout'>
+      <h2>Add New Blogs</h2>
+      <form onSubmit={handleSubmit} className='blog-form'>
+        <div className='blog-input'>
           <label>Title</label>
           <input
             type='text'
             name='title'
             value={formData.title}
             onChange={handleChange}
+            placeholder='Title of Blog'
           />
         </div>
-        <div className='form_comp'>
+        <div className='blog-input'>
           <label>Content</label>
           <textarea
             name='content'
             value={formData.content}
             onChange={handleChange}
+            placeholder='Title of Content'
           />
         </div>
-        <button className='Add_Blog_btn btn btn-primary' data-bs-dismiss="modal" type='submit'>Add Blog</button>
       </form>
+        <button className='Add_Blog_btn btn btn-outline-light w-25 m-4' data-bs-dismiss="modal" type='submit'>Add Blog</button>
     </div>
   );
 }
