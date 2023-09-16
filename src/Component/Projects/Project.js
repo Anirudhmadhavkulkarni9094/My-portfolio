@@ -1,38 +1,49 @@
 import axios from 'axios';
-import React, { useEffect, useState } from 'react'
-import '../Resources/StyleSheet/Project.css'
+import React, { useEffect, useState } from 'react';
+import '../Resources/StyleSheet/Project.css';
+
 function Project() {
-  const [Project , setProject] = useState([]);
-  useEffect(()=>{
-    axios.get("http://localhost:3001/get-projects").then(res=>{
-      setProject(res.data.data);
-    })
-  },[Project])
+  const [projects, setProjects] = useState([]);
+  const [error, setError] = useState(null);
+
+  useEffect(() => {
+    axios.get("https://portfolio-17hx.onrender.com/get-projects") // Replace with your API URL
+      .then((res) => {
+        setProjects(res.data.data);
+      })
+      .catch((error) => {
+        console.error("Error fetching projects:", error);
+        setError("Failed to fetch projects");
+      });
+  }, []);
 
   const handleDelete = async (_id) => {
     try {
-        await axios.delete(`https://portfolio-17hx.onrender.com/project/${_id}`);
-        
+      await axios.delete(`https://portfolio-17hx.onrender.com/project/${_id}`); // Replace with your API URL
+      // Reload projects after deletion if needed
     } catch (error) {
-        console.log("Error deleting blog:", error);
+      console.error("Error deleting project:", error);
     }
-};
+  };
 
-  
+  if (error) {
+    return <div>Error: {error}</div>;
+  }
+
   return (
     <div className='project'>
-      {Project.map(project=>{
-        return <div className='project-card'>
+      {projects.map((project) => (
+        <div className='project-card' key={project._id}>
           <h3>{project.title}</h3>
           <span>{project.description}</span>
-          <div>  
-            <button className='btn btn-danger m-1' onClick={()=>handleDelete(project._id)}>Delete</button>
-          <button href={project.link} className="btn btn-dark project-link m-1">Link</button>
+          <div>
+            <button className='btn btn-danger m-1' onClick={() => handleDelete(project._id)}>Delete</button>
+            <a href={project.link} className="btn btn-dark project-link m-1">Link</a>
           </div>
         </div>
-      })}
+      ))}
     </div>
-  )
+  );
 }
 
-export default Project
+export default Project;
