@@ -11,7 +11,7 @@ function Project() {
 
   const handleDelete = async (_id) => {
     try {
-        await axios.delete(`http://localhost:3001/project/${_id}`);
+        await axios.delete(`https://portfolio-17hx.onrender.com/project/${_id}`);
         
     } catch (error) {
         console.log("Error deleting blog:", error);
