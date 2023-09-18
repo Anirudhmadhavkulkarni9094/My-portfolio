@@ -2,7 +2,7 @@ import axios from 'axios';
 import React, { useEffect, useState } from 'react';
 import '../Resources/StyleSheet/Project.css';
 
-function Project() {
+function Project({auth}) {
   const [projects, setProjects] = useState([]);
   const [error, setError] = useState(null);
 
@@ -37,7 +37,7 @@ function Project() {
           <h3>{project.title}</h3>
           <span>{project.description}</span>
           <div>
-            <button className='btn btn-danger m-1' onClick={() => handleDelete(project._id)}>Delete</button>
+            {auth && <button className='btn btn-danger m-1' onClick={() => handleDelete(project._id)}>Delete</button>}
             <a href={project.link} className="btn btn-dark project-link m-1">Link</a>
           </div>
         </div>

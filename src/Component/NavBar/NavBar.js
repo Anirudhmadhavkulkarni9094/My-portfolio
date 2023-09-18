@@ -4,7 +4,7 @@ import Login from '../Forms/Login';
 
 import { Link } from 'react-router-dom';
 
-function NavBar() {
+function NavBar({ authorize, auth }) {
   return (
     <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
       <div className="container-fluid">
@@ -45,9 +45,11 @@ function NavBar() {
               </Link>
             </li>
             <li className="nav-item">
-              <Link className="nav-link" to="/Admin-panel">
-                Admin panel
-              </Link>
+              {auth && (
+                <Link className="nav-link" to="/Admin-panel">
+                  Admin panel
+                </Link>
+              )}
             </li>
           </ul>
           <ul className="navbar-nav justify-content-end">
@@ -60,17 +62,18 @@ function NavBar() {
               >
                 Login
               </button>
-              <div className="modal fade" id="exampleModal" tabIndex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                <div className="modal-dialog" role="document">
-                  <div className="modal-content">
-                    <div className="modal-header">
-                      <button type="button" className="close" data-bs-dismiss="modal" aria-label="Close">
+              <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                       </button>
                     </div>
-                    <div className="modal-body">
+                    <div class="modal-body">
                       {/* Your modal content goes here */}
-                      <Login></Login>
+                      <Login authorize={authorize} />
                     </div>
                   </div>
                 </div>
