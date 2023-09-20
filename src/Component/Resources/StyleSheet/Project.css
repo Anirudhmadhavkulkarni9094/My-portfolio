@@ -53,3 +53,22 @@
   margin: 0.5rem;
 
 }
+
+
+.Project_desc{
+  height: 15rem;
+  overflow: scroll;
+}
+.Project_desc::-webkit-scrollbar {
+  width: 0rem; /* You can adjust this value to change the scrollbar width */
+}
+
+.Project_desc::-webkit-scrollbar-thumb {
+  background-color: transparent; /* Make the scrollbar thumb transparent */
+}
+
+/* Hide the scrollbar for Firefox */
+.Project_desc {
+  scrollbar-width: thin; /* "thin" makes the scrollbar invisible */
+  scrollbar-color: transparent transparent; /* Make the scrollbar thumb and track transparent */
+}

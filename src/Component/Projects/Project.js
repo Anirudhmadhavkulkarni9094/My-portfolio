@@ -35,7 +35,7 @@ function Project({auth}) {
       {projects.map((project) => (
         <div className='project-card' key={project._id}>
           <h3>{project.title}</h3>
-          <span>{project.description}</span>
+          <span className='Project_desc'>{project.description}</span>
           <div>
             {auth && <button className='btn btn-danger m-1' onClick={() => handleDelete(project._id)}>Delete</button>}
             <a href={project.link} className="btn btn-dark project-link m-1">Link</a>
