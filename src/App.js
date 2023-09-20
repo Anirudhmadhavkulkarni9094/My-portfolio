@@ -25,7 +25,7 @@ function App() {
         <Route path="/My-Project" element={<Project auth = {auth}/>} />
         <Route path="/about-me" element={<About />} />
         <Route path="/feedback" element={<FeedBack />} />
-        <Route path="/Admin-panel" element={<AdminPanel/>} />
+        {auth && <Route path="/Admin-panel" element={<AdminPanel/>} />}
     </Routes>
   </BrowserRouter>
   );
