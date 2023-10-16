@@ -19,7 +19,7 @@ function AddBlog() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      await axios.post('https://portfolio-17hx.onrender.com/add-blogs', formData);
+      await axios.post('https://portfolio-server-u2yh.onrender.com/add-blogs', formData);
       console.log('Data added successfully');
     } catch (err) {
       console.error('Data cannot be added:', err.message);

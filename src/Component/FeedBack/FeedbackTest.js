@@ -5,7 +5,7 @@ import axios from 'axios';
 function FeedbackTest() {
   const [Feedbacks , setFeedback ] = useState([]);
   useEffect(()=>{
-    axios.get('https://portfolio-17hx.onrender.com/feedback').then(res=>{
+    axios.get('https://portfolio-server-u2yh.onrender.com/feedback').then(res=>{
       setFeedback(res.data.data);
     }).catch(err=>{
       console.log(err);

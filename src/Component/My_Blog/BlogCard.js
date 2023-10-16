@@ -7,7 +7,7 @@ function BlogCard({ blog, onDelete }) {
 
     const handleDelete = async () => {
         try {
-            await axios.delete(`http://localhost:3001/delete-blog/${_id}`);
+            await axios.delete(`https://portfolio-server-u2yh.onrender.com/delete-blog/${_id}`);
             onDelete(_id);
         } catch (error) {
             console.log("Error deleting blog:", error);

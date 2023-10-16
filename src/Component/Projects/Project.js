@@ -7,7 +7,7 @@ function Project({auth}) {
   const [error, setError] = useState(null);
 
   useEffect(() => {
-    axios.get("https://portfolio-17hx.onrender.com/get-projects") // Replace with your API URL
+    axios.get("https://portfolio-server-u2yh.onrender.com/get-projects") // Replace with your API URL
       .then((res) => {
         setProjects(res.data.data);
       })
@@ -19,7 +19,7 @@ function Project({auth}) {
 
   const handleDelete = async (_id) => {
     try {
-      await axios.delete(`https://portfolio-17hx.onrender.com/project/${_id}`); // Replace with your API URL
+      await axios.delete(`https://portfolio-server-u2yh.onrender.com/project/${_id}`); // Replace with your API URL
       // Reload projects after deletion if needed
     } catch (error) {
       console.error("Error deleting project:", error);

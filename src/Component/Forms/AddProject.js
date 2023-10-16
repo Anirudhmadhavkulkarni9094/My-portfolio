@@ -20,7 +20,7 @@ const AddProjectForm = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post('https://portfolio-17hx.onrender.com/add-project', formData);
+      const response = await axios.post('https://portfolio-server-u2yh.onrender.com/add-project', formData);
 
       if (response.status === 201) {
         alert("added successfully")
